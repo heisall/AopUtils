@@ -161,7 +161,7 @@
 	
 	运行效果
 	
-	![效果图.gif](https://upload-images.jianshu.io/upload_images/3347923-c04c555b2591fdc6.gif?imageMogr2/auto-orient/strip)
+	![效果图.gif](https://upload-images.jianshu.io/upload_images/3347923-c04c555b2591fdc6.gif)
 	
    这样我们的功能就实现了。
 
