@@ -42,7 +42,7 @@
 	}
 	
 	dependencies {
-		implementation fileTree(dir: 'libs', include: ['*.jar'])
+	    implementation fileTree(dir: 'libs', include: ['*.jar'])
 	    ...
 	    //aspectjrt的依赖
 	    implementation 'org.aspectj:aspectjrt:1.8.13'
@@ -90,13 +90,13 @@
 	//使用@Aspect注解标示这是一个切面类
 	@Aspect
 	class SingleClickAspect {
-		//@Pointcut来标识所要寻找的切点，就是我们定义的@ SingleClick注解
+	    //@Pointcut来标识所要寻找的切点，就是我们定义的@ SingleClick注解
 	    @Pointcut("execution(@com.guoyang.android.aoputils.SingleClick * *(..))")//方法切入点
 	    fun methodAnnotated() {
 	
 	    }
 		
-		/**
+	     /**
 	     * joinPoint.proceed() 执行注解所标识的代码
 	     * @After 可以在方法前插入代码
 	     * @Before 可以在方法后插入代码
@@ -146,12 +146,12 @@
 	        }
 	    }
 		
-		//普通的方法
+	    //普通的方法
 	    fun normal(){
 	        normal.text = "点击次数:${nornalSum++}次"
 	    }
 	
-		//使用@SingleClick注解表示该方法防止抖动
+	    //使用@SingleClick注解表示该方法防止抖动
 	    @SingleClick
 	    fun single(){
 	        single.text = "防止多次点击:${singleSum++}次"
@@ -161,7 +161,7 @@
 	
 	运行效果
 	
-	![效果图.gif](https://upload-images.jianshu.io/upload_images/3347923-c04c555b2591fdc6.gif)
+	![效果图](https://github.com/GuoYangGit/AopUtils/blob/master/gif/%E6%95%88%E6%9E%9C%E5%9B%BE.gif)
 	
    这样我们的功能就实现了。
 
